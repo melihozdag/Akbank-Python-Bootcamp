@@ -47,7 +47,6 @@ class Library:
             print("Kütüphanenizde kitap bulunmamaktadır...")
         else:
             book_title_to_remove = input("Kaldırılacak kitap adı: ").capitalize()
-            books = self.file.read().splitlines()
             updated_books = []
             
             found = False
@@ -67,6 +66,7 @@ class Library:
             
             for updated_book in updated_books:
                 self.file.write(updated_book + '\n')
+
             
 lib = Library()
 
